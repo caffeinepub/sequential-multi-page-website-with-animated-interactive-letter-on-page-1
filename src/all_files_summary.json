@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report describing required Page 2 text updates in storyContent.ts.",
+  "frontend-file-summaries.txt": "Prewritten summaries for key frontend files in the project.",
+  "frontend/index.css": "Tailwind base stylesheet defining color variables, dark mode values, and global styles.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Sets up TanStack Router with three routes and provides the router to the app.",
+  "frontend/src/components/InteractiveLetter.tsx": "Interactive letter component handling open animation and rendering text from storyContent.",
+  "frontend/src/components/TulipRainOverlay.tsx": "Generates and animates falling tulip emojis with randomized properties.",
+  "frontend/src/content/storyContent.ts": "Centralized text content for all pages including updated Page 2 birthday message.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor via React Query, updating on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity auth context providing login, logout, and stored identity handling.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder for React Query hooks with no current backend usage.",
+  "frontend/src/index.css": "Defines Tailwind layers and a custom OKLCH color theme with light/dark modes plus utility animations and keyframes.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and Internet Identity providers.",
+  "frontend/src/pages/Page1.tsx": "Renders the garden scene intro with an interactive letter that opens and navigates to Page 2.",
+  "frontend/src/pages/Page2.tsx": "Displays a gated birthday message page that requires Page 1 visit and includes a button to continue to Page 3.",
+  "frontend/src/pages/Page3.tsx": "Gated page featuring a spell-casting animation that transitions to a final black screen with a message and tulip rain.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom OKLCH theme variables, garden color palette, typography, animations, and plugin integrations.",
+  "project_state.json": "Tracks project metadata, features, requirements, and current implementation state for the multi-page birthday experience."
+}

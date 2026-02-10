@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update Page 2 birthday message text in centralized story content",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "summary": "Update Page 2 centralized heading and paragraphs in storyContent to match the provided birthday message exactly, preserving emojis, punctuation, ellipses, and line breaks while leaving all other behavior unchanged.",
+      "acceptanceCriteria": [
+        "Page 2 (route \"/page2\") renders a heading that matches the first line of the provided message exactly, including emojis and capitalization.",
+        "Page 2 renders the remaining message content exactly as provided, preserving line breaks and spacing (including the double-space in \"aur  un dino\"), when viewed in the browser.",
+        "No changes occur to Page 1 letter text, Page 3 final message, navigation routes, or sessionStorage gating logic."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/storyContent.ts",
+          "operation": "modify",
+          "description": "Replace storyContent.page2.heading and storyContent.page2.paragraphs so they match the user-provided message exactly as given (including emojis, punctuation, ellipses, and all line breaks/spacing such as the double-space in \"aur  un dino\"), without modifying any other keys or content for other pages."
+        }
+      ]
+    }
+  ]
+}

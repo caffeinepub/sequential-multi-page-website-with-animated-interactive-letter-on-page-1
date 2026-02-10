@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "Multi-page website with sequential navigation; Page 1 is an illustrated garden scene with an interactive letter that opens with a smooth animation to reveal a birthday message and includes a button to proceed to the next page; Page 2 contains a birthday-themed customized message and a next button leading to a subsequent page featuring a magician spell effect that transitions to a full black screen with white text showing a provided birthday poem/message and dropping tulip emojis (replacing the prior 'Error 404' popup).",
+  "architectural_notes": [
+    "Use button-driven navigation to advance through pages in a fixed sequence (page-to-page flow).",
+    "Implement click/tap interaction on the letter element with a smooth open animation before revealing message content.",
+    "Add Page 2 as a birthday-themed message page with a next button continuing the sequential flow.",
+    "Replace Page 3 reveal: after spell effect, transition to a full black screen with white text showing the provided message and animate dropping tulip emojis (instead of an 'Error 404' popup).",
+    "Update the displayed birthday/custom message text (via the centralized content module) to the newly provided “HAPPY HAPPY HAPPY WALA 21st BIRTHDAY…” multi-paragraph Hindi/English message, preserving line breaks and emojis."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-multi-page-react-app-where-pages-are-revealed-sequentially-via-explicit-user-actions-button-presses-clicks-starting-with-page-1-and-a-placeholder-page-2-route-that-can-be-navigated-to-from-page-1",
+      "title": "Create a multi-page React app where pages are revealed sequentially via explicit user actions (button presses/clicks), starting with Page 1 and a placeholder Page 2 route that can be navigated to from Page 1.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-page-1-as-an-illustrated-garden-scene-background-featuring-greenery-a-large-tree-and-a-boy-sitting-under-the-tree-writing-a-letter-show-an-on-screen-prompt-instructing-the-user-to-press-click-the-letter",
+      "title": "Implement Page 1 as an illustrated garden scene background featuring greenery, a large tree, and a boy sitting under the tree writing a letter. Show an on-screen prompt instructing the user to press/click the letter.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-on-page-1-make-the-letter-interactive-when-pressed-clicked-animate-the-letter-opening-with-a-smooth-visually-pleasing-transition-and-reveal-the-provided-message-text-inside-the-opened-letter",
+      "title": "On Page 1, make the letter interactive: when pressed/clicked, animate the letter opening with a smooth, visually pleasing transition and reveal the provided message text inside the opened letter.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-next-page-button-on-the-opened-letter-that-navigates-to-page-2-when-pressed-clicked",
+      "title": "Add a 'Next page' button on the opened letter that navigates to Page 2 when pressed/clicked.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-creative-visual-theme-for-the-site-colors-typography-spacing-and-component-styling-that-fits-a-warm-storybook-garden-vibe-and-use-it-consistently-across-page-1-and-page-2-avoid-default-browser-styling",
+      "title": "Apply a coherent, creative visual theme for the site (colors, typography, spacing, and component styling) that fits a warm, storybook/garden vibe, and use it consistently across Page 1 and Page 2 (avoid default browser styling).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-the-required-static-image-assets-in-the-frontend-under-frontend-public-assets-generated-and-wire-them-into-page-1-so-the-background-and-letter-visuals-render-from-those-local-static-assets-no-backend-image-serving",
+      "title": "Generate and include the required static image assets in the frontend under frontend/public/assets/generated, and wire them into Page 1 so the background and letter visuals render from those local static assets (no backend image serving).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-page-2-route-page2-to-display-the-provided-birthday-themed-customized-message-exact-text-as-provided-by-the-user-in-a-styled-card-layout-consistent-with-the-existing-warm-storybook-theme-and-include-a-clearly-labeled-next-button-to-proceed-to-the-next-page",
+      "title": "Update Page 2 (route \"/page2\") to display the provided birthday-themed customized message (exact text as provided by the user) in a styled card/layout consistent with the existing warm storybook theme, and include a clearly labeled “Next” button to proceed to the next page.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-sequential-navigation-gating-for-the-new-flow-by-setting-a-sessionstorage-flag-when-the-user-clicks-the-next-button-on-page-2-e-g-visited-page2-true-and-require-that-flag-on-the-next-page-so-it-cannot-be-accessed-directly-without-going-through-page-2",
+      "title": "Implement sequential navigation gating for the new flow by setting a sessionStorage flag when the user clicks the “Next” button on Page 2 (e.g., \"visited-page2\" = \"true\"), and require that flag on the next page so it cannot be accessed directly without going through Page 2.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-page-3-route-and-page-component-e-g-route-page3-that-shows-a-magician-casting-spells-play-a-short-visually-clear-spell-cast-animation-sequence-on-user-action-e-g-a-cast-spell-button-then-display-a-popup-modal-message-that-reads-exactly-error-404",
+      "title": "Add a new Page 3 route and page component (e.g., route \"/page3\") that shows a magician casting spells; play a short, visually clear “spell cast” animation/sequence on user action (e.g., a “Cast spell” button), then display a popup/modal message that reads exactly: \"Error 404\".",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-router-configuration-to-include-the-new-page-3-route-in-the-tanstack-router-route-tree-and-ensure-the-page-2-next-button-navigates-to-this-new-route",
+      "title": "Update the router configuration to include the new Page 3 route in the TanStack Router route tree, and ensure the Page 2 “Next” button navigates to this new route.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-page-3-route-page3-so-that-after-the-user-presses-clicks-the-cast-spell-button-and-the-existing-spell-cast-sequence-finishes-the-app-shows-a-complete-full-screen-black-view-with-centered-white-text-that-displays-the-following-message-exactly-preserve-line-breaks-and-emojis-and-shows-a-continuous-dropping-falling-tulip-emoji-animation-over-the-black-screen-bass-fir-iske-baad-mai-is-jaddu-me-khoo-gaya-to-itna-hi-kar-paya-happy-birthday",
+      "title": "Update Page 3 (route \"/page3\") so that after the user presses/clicks the “Cast Spell” button and the existing spell-cast sequence finishes, the app shows a complete full-screen black view with centered white text that displays the following message exactly (preserve line breaks and emojis), and shows a continuous dropping/falling tulip emoji (🌷) animation over the black screen:\n\n\"चाँदी सोना एक तरफ़,   \nतेरा होना एक तरफ़,   \nएक तरफ़ तेरी आँखें,  \nजादू टोना एक तरफ़।। \nBass fir iske baad Mai is jaddu me khoo gaya to itna hi kar paya\nHAPPY BIRTHDAY 🎂❤️\"",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-any-necessary-global-css-tailwind-utility-or-component-local-styles-to-support-the-falling-tulip-emoji-animation-on-the-final-black-screen-ensuring-the-animation-performs-smoothly-and-does-not-require-any-third-party-libraries",
+      "title": "Add any necessary global CSS/Tailwind utility (or component-local styles) to support the falling tulip emoji animation on the final black screen, ensuring the animation performs smoothly and does not require any third-party libraries.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-single-centralized-frontend-content-module-for-all-story-text-shown-across-page-1-page-2-and-page-3-including-prompts-headings-body-copy-and-button-labels-so-that-replacing-text-does-not-require-editing-multiple-components",
+      "title": "Create a single, centralized frontend content module for all story text shown across Page 1, Page 2, and Page 3 (including prompts, headings, body copy, and button labels) so that replacing text does not require editing multiple components.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refactor-page-1-the-interactiveletter-component-page-2-and-page-3-to-render-their-displayed-text-from-the-centralized-content-module-while-preserving-the-existing-visuals-animations-and-sequential-navigation-gating-behavior",
+      "title": "Refactor Page 1, the InteractiveLetter component, Page 2, and Page 3 to render their displayed text from the centralized content module while preserving the existing visuals, animations, and sequential navigation gating behavior.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-content-module-frontend-src-content-storycontent-ts-so-that-page-2-displays-the-user-provided-birthday-message-exactly-as-provided-including-emojis-punctuation-ellipses-and-line-breaks-specifically-replace-storycontent-page2-heading-and-storycontent-page2-paragraphs-to-match-the-new-text-without-changing-any-other-page-content-visuals-routing-or-gating-behavior",
+      "title": "Update the centralized content module (frontend/src/content/storyContent.ts) so that Page 2 displays the user-provided birthday message exactly as provided (including emojis, punctuation, ellipses, and line breaks). Specifically, replace storyContent.page2.heading and storyContent.page2.paragraphs to match the new text, without changing any other page content, visuals, routing, or gating behavior.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a multi-page website where pages open sequentially when specific buttons are pressed",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Page 1: Garden background scene with greenery and a huge tree; boy sitting under the tree writing a letter; show prompt to press the letter",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Interactive letter on Page 1: on press/click, smoothly animate the letter opening and display the provided message text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add a 'Next page' button on the opened letter to navigate to the next page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Page 2: Birthday-themed page displaying the provided customized message and a 'Next' button to proceed",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Replace the final Page 3 'Error 404' popup with a full black screen, white text displaying the provided Hindi/English birthday message, and dropping tulip emojis effect",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Allow replacing/updating existing displayed text content (e.g., birthday message) on one or more pages",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Sequential multi-page website with animated interactive letter on Page 1",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

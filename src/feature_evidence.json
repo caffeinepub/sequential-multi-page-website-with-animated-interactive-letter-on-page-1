@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-centralized-content-module-frontend-src-content-storycontent-ts-so-that-page-2-displays-the-user-provided-birthday-message-exactly-as-provided-including-emojis-punctuation-ellipses-and-line-breaks-specifically-replace-storycontent-page2-heading-and-storycontent-page2-paragraphs-to-match-the-new-text-without-changing-any-other-page-content-visuals-routing-or-gating-behavior",
+      "featureTitle": "Update the centralized content module (frontend/src/content/storyContent.ts) so that Page 2 displays the user-provided birthday message exactly as provided (including emojis, punctuation, ellipses, and line breaks). Specifically, replace storyContent.page2.heading and storyContent.page2.paragraphs to match the new text, without changing any other page content, visuals, routing, or gating behavior.",
+      "files": [
+        "frontend/src/content/storyContent.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

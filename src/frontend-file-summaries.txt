@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with three routes (Page 1, Page 2, and Page 3) and renders the RouterProvider.",
+  "frontend/src/pages/Page1.tsx": "First page component displaying the garden background scene with an interactive letter that opens on click; now imports and displays prompt text from the centralized story content module.",
+  "frontend/src/pages/Page2.tsx": "Second page component displaying the birthday message with preserved line breaks in a birthday-themed card; now imports all text (gating alerts, heading, body paragraphs, button labels, footer) from the centralized story content module.",
+  "frontend/src/components/InteractiveLetter.tsx": "Interactive letter component that displays a closed letter image, animates to an open state on click, and reveals birthday message text; now imports all text content (paragraphs, button label, aria-label) from the centralized story content module.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for React Query hooks; no backend queries needed for this application.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining the warm storybook garden theme for both light and dark modes, plus custom animations including fadeIn, zoomIn, spellCast for the magician spell sequence, and tulipFall for the falling tulip emoji effect.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom garden theme colors (sage, moss, parchment, ink), serif font family, and maintains existing shadcn/ui setup.",
+  "frontend/src/pages/Page3.tsx": "Third page component displaying a magician scene with spell-casting interaction; now imports all text (gating alerts, title, button labels, magic progress message, final multi-line message) from the centralized story content module.",
+  "frontend/src/components/TulipRainOverlay.tsx": "Lightweight React overlay component that continuously renders and animates multiple falling 🌷 tulip emojis using CSS animations with randomized horizontal positions, delays, and durations; positioned to not intercept pointer events.",
+  "frontend/src/content/storyContent.ts": "Centralized content module containing all user-visible story text for Page 1, InteractiveLetter, Page 2, and Page 3, organized by page with support for multi-line text formatting; Page 2 paragraphs updated to match the new birthday message exactly including all emojis, punctuation, and spacing (including the double-space in \"aur  un dino\")."
+}

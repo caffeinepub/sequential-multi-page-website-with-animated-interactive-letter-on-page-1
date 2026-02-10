@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Update Page 2 birthday message text in centralized story content",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "text": "Update the centralized content module (frontend/src/content/storyContent.ts) so that Page 2 displays the user-provided birthday message exactly as provided (including emojis, punctuation, ellipses, and line breaks). Specifically, replace storyContent.page2.heading and storyContent.page2.paragraphs to match the new text, without changing any other page content, visuals, routing, or gating behavior.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "🎉 Wishing you a HAPPY HAPPY HAPPY WALA 21st BIRTHDAY 🎂💖\n\nPure 2 saal 10 mahine 28 din ho gaye jab pehli baar tujhe dekha tha…\naur tab bilkul nahi socha tha ki\nye ladki mere se kya-kya karwane wali hai next 2–3 saalon mein 😭💫\n\nPadhai se leke ladai tak — sab kar liya humne 😅📚⚡\nkuch din bahut khush the tab humne bahoot baate Kari 🌸\nto kuch not so happy bhi the aur  un dino ko silence ne dominate kia…\nbut ek cheez hamesha common thi…\nyou know what? 2 and 1 🤣🤣🤣\n\nLogical baatoon ki umeed  aur wo bhi ek gadhe se 🫏 😌\nagar logic batane laga tu saar phodne pe aa jayegi 😏\nto Aaj logic nahi…\n\nthoda magic dikhaata hoon ✨😉"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page 2 (route \"/page2\") renders a heading that matches the first line of the provided message exactly, including emojis and capitalization.",
+        "Page 2 renders the remaining message content exactly as provided, preserving line breaks and spacing (including the double-space in \"aur  un dino\"), when viewed in the browser.",
+        "No changes occur to Page 1 letter text, Page 3 final message, navigation routes, or sessionStorage gating logic."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit any files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT.",
+    "Keep all text sourcing centralized via frontend/src/content/storyContent.ts (do not duplicate the message text inside page components)."
+  ],
+  "nonGoals": [
+    "Changing the app visual theme, layout, or animations.",
+    "Adding new routes/pages or modifying the sequential navigation flow.",
+    "Backend changes (Motoko actor remains unchanged)."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
